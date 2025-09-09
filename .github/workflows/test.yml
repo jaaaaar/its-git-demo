@@ -6,7 +6,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - run: |
+
+      - name: List files (debug)
+        run: ls -la
+
+      - name: Bash syntax check and run script
+        run: |
           bash -n system_info.sh
           chmod +x system_info.sh
           ./system_info.sh
