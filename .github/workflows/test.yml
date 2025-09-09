@@ -12,6 +12,6 @@ jobs:
 
       - name: Bash syntax check and run script
         run: |
-          bash -n system_info.sh
-          chmod +x system_info.sh
+          bash -n system-info.sh
+          chmod +x system-info.sh
           ./system_info.sh
