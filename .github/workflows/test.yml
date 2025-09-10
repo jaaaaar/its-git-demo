@@ -1,17 +1,11 @@
 name: Test
 on: [push, pull_request]
-
 jobs:
   test:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-
-      - name: List files (debug)
-        run: ls -la
-
-      - name: Bash syntax check and run script
         run: |
-          bash -n system-info.sh
-          chmod +x system-info.sh
+          bash -n system_info.sh
+          chmod +x system_info.sh
           ./system_info.sh
